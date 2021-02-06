@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Contact Loren</title>
+        <link href="styles.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1>Loren Fletcher</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#projects">Projects</a></li>
+                    <li><a href="index.html#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section id="contact">
+            <img id="self-photo" src="images/self-photo.jpg" alt="self photo">
+            <h2>Contact Information</h2>
+            <h3>Phone: (480) 276-5806</h3>
+            <h3>E-Mail: lorenfletcher@msn.com</h3>
+            <p>Please call or email me during normal business hours.</p>
+            <p>The current time is: <span id="current-time"></span></p>
+            <p>I am currently <span id="availability"></span>.</p>
+        </section>
+        <script>
+            setInterval(() => {
+                const currentTime = document.getElementById("current-time");
+                const now = new Date();
+                currentTime.innerText = now.toTimeString();
+                const availability = document.getElementById("availability");
+                const beginningTime = new Date(now.toDateString() + " 09:00:00 GMT-0700");
+                const endingTime = new Date(now.toDateString() + " 17:00:00 GMT-0700");
+                if (now >= beginningTime && now <= endingTime)
+                    availability.innerText = "available";
+                else 
+                    availability.innerText = "unavailable";
+            }, 1000);
+        </script>
+    </body>
+</html>

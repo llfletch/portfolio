@@ -1,4 +1,27 @@
 #self-photo {
     float: right;
     width: 200px;
+    padding: 20px;;
+}
+
+h1 {
+    display: inline-block;
+}
+
+nav {
+    float: right;
+}
+
+nav li {
+    display: inline-block;
+    font-size: 1.25rem;
+    padding: 10px;
+}
+
+section, header {
+    margin: 20px;
+}
+
+.project img {
+    width: 300px;
 }
