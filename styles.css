@@ -24,10 +24,15 @@ nav {
     float: right;
 }
 
+nav ul {
+    padding-inline-start: 0;
+}
+
 nav li {
     display: inline-block;
     font-size: 1.25rem;
-    padding: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
 }
 
 section, header {
@@ -44,4 +49,20 @@ summary {
 
 p {
     font-family: Arial, Helvetica, sans-serif;
+}
+
+@media only screen and (max-width: 600px) {
+    nav {
+        float: none;
+        display: block;
+        width: 100%;
+    }
+
+    nav ul {
+        margin-top: 0;
+    }
+
+    nav li {
+        padding-top: 0;
+    }
 }
